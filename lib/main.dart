@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tipzy/widgets/project_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            ProjectCard(
+              title: "Test ML Project",
+              description:
+                  "This is an ML project, that enhance the deference between supervised and unsupervised learning.",
+              imageUrl: 'https://picsum.photos/300/300',
+            ),
+          ],
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
