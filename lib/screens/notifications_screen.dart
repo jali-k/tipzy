@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tipzy/widgets/tip.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
@@ -9,7 +10,7 @@ class NotificationsScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Text("No notifications yet!"),
+          Tip(),
         ],
       ),
     );
