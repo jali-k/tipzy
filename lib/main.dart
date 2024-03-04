@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tipzy/screens/notifications_screen.dart';
+import 'package:tipzy/screens/projects_screen.dart';
 import 'package:tipzy/widgets/project_card.dart';
 
 void main() {
@@ -37,33 +39,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.work), label: "Projects"),
-          NavigationDestination(
-              icon: Icon(Icons.ring_volume), label: "Notifications"),
-        ],
-        selectedIndex: currentIndex,
-        onDestinationSelected: (value) => setState(() => currentIndex = value),
-      ),
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            ProjectCard(
-              title: "Test ML Project",
-              description:
-                  "This is an ML project, that enhance the deference between supervised and unsupervised learning.",
-              imageUrl: 'https://picsum.photos/300/300',
-            ),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.work), label: "Projects"),
+            NavigationDestination(
+                icon: Icon(Icons.ring_volume), label: "Notifications"),
           ],
+          selectedIndex: currentIndex,
+          onDestinationSelected: (value) =>
+              setState(() => currentIndex = value),
         ),
-      ),
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
+        ),
+        body: [ProjectsScreen(), NotificationsScreen()][currentIndex]
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
