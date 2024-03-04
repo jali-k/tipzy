@@ -42,8 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.work), label: "Projects"),
-            NavigationDestination(
-                icon: Icon(Icons.ring_volume), label: "Notifications"),
+            NavigationDestination(icon: Icon(Icons.aod), label: "Tips"),
           ],
           selectedIndex: currentIndex,
           onDestinationSelected: (value) =>
