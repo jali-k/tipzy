@@ -33,9 +33,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.work), label: "Projects"),
+          NavigationDestination(
+              icon: Icon(Icons.ring_volume), label: "Notifications"),
+        ],
+        selectedIndex: currentIndex,
+        onDestinationSelected: (value) => setState(() => currentIndex = value),
+      ),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
