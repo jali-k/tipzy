@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "7869757307",
+    "project_id": "tipzy-dc078",
+    "storage_bucket": "tipzy-dc078.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7869757307:android:a2c6b1fc79e8425748afde",
+        "android_client_info": {
+          "package_name": "com.example.tipzy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM3dFHsWrPJqKZAAi-_2RDQSQSeV78hiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
