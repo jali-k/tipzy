@@ -12,7 +12,20 @@
           "package_name": "com.example.tipzy"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "7869757307-vt2urtjd9o0guhh4kf399juhgv3jlqi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tipzy",
+            "certificate_hash": "b32be45b0f30e9e6d1677e16ae65f40d0e39235a"
+          }
+        },
+        {
+          "client_id": "7869757307-6cphovt631mbpb46g2i2s42t6et9jc2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAM3dFHsWrPJqKZAAi-_2RDQSQSeV78hiM"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7869757307-6cphovt631mbpb46g2i2s42t6et9jc2r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "7869757307-26q8n6uj2rnou2dmett1ih3nahgqq0ao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tipzy.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

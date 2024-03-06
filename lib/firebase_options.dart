@@ -67,6 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '7869757307',
     projectId: 'tipzy-dc078',
     storageBucket: 'tipzy-dc078.appspot.com',
+    androidClientId: '7869757307-vt2urtjd9o0guhh4kf399juhgv3jlqi4.apps.googleusercontent.com',
+    iosClientId: '7869757307-ihd8tcf8pmh31abtf79rh4qjtm43r2h9.apps.googleusercontent.com',
     iosBundleId: 'com.example.tipzy',
   );
 
@@ -76,6 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '7869757307',
     projectId: 'tipzy-dc078',
     storageBucket: 'tipzy-dc078.appspot.com',
+    androidClientId: '7869757307-vt2urtjd9o0guhh4kf399juhgv3jlqi4.apps.googleusercontent.com',
+    iosClientId: '7869757307-26q8n6uj2rnou2dmett1ih3nahgqq0ao.apps.googleusercontent.com',
     iosBundleId: 'com.example.tipzy.RunnerTests',
   );
 }
