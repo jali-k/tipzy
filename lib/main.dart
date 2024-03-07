@@ -1,10 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 import 'package:tipzy/firebase_options.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:tipzy/providers/user_provider.dart';
 import 'package:tipzy/screens/notifications_screen.dart';
 import 'package:tipzy/screens/projects_screen.dart';
 import 'package:tipzy/widgets/project_card.dart';
@@ -12,7 +16,7 @@ import 'package:tipzy/widgets/project_card.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(ProviderScope(child: MyApp()) );
 }
 
 class MyApp extends StatelessWidget {
@@ -33,16 +37,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends ConsumerStatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  ConsumerState<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends ConsumerState<MyHomePage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   User? _user;
@@ -76,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _auth.authStateChanges().listen((event) {
       setState(() {
         _user = event;
+        ref.read(userProvider.notifier).state = event;
       });
     });
   }
