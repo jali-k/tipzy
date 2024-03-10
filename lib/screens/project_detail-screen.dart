@@ -26,7 +26,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 20),
-            Image.network('https://picsum.photos/300/300'),
+            Image.network(widget.imageUrl),
             SizedBox(height: 20),
             Text(widget.description),
             SizedBox(height: 20),
