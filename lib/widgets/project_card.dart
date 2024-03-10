@@ -28,10 +28,13 @@ class ProjectCard extends StatelessWidget {
             children: [
               Flexible(
                 flex: 1,
-                child: Image.network(
-                  imageUrl,
-                  width: 100,
-                  height: 100,
+                child: Hero(
+                  tag: "project image",
+                  child: Image.network(
+                    imageUrl,
+                    width: 100,
+                    height: 100,
+                  ),
                 ),
               ),
               SizedBox(width: 10),

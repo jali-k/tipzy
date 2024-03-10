@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ProjectDetailsScreen extends StatefulWidget {
   final String title;
@@ -26,7 +27,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 20),
-            Image.network(widget.imageUrl),
+            Hero(child: Image.network(widget.imageUrl), tag: "project image"),
             SizedBox(height: 20),
             Text(widget.description),
             SizedBox(height: 20),
