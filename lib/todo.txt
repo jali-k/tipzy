@@ -1,0 +1,8 @@
+1. Connect to firebase
+2. Store and retrieve projects from the db
+3. Store tips
+4. Create admin pages
+5. Implement admin login
+6. Adding projects
+7. Send notifications
+8. Showing completed projects
