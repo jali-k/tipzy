@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+// enum ImageAction {
+//   uploadImage(String title),
+//   pasteUrl(String title);
+
+//   final String title;
+
+//   const ImageAction(this.title);
+// }
+
 class DynamicWidgetDropdown extends StatefulWidget {
   final List<String> dropdownItems;
   final Widget Function(String) widgetBuilder;
@@ -27,19 +36,30 @@ class _DynamicWidgetDropdownState extends State<DynamicWidgetDropdown> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        DropdownButton<String>(
-          value: _selectedValue,
-          items: widget.dropdownItems.map((String value) {
-            return DropdownMenuItem<String>(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
-          onChanged: (String? newValue) {
-            setState(() {
-              _selectedValue = newValue!;
-            });
-          },
+        Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey,
+              width: 1.0,
+            ),
+            borderRadius: BorderRadius.circular(5.0),
+          ),
+          child: DropdownButton<String>(
+            value: _selectedValue,
+            items: widget.dropdownItems.map((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+            onChanged: (String? newValue) {
+              setState(() {
+                _selectedValue = newValue!;
+              });
+            },
+          ),
         ),
         widget.widgetBuilder(_selectedValue), // Build the dynamic widget
       ],
