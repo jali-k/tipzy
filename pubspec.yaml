@@ -37,8 +37,10 @@ dependencies:
   firebase_core: ^2.26.0
   firebase_analytics: ^10.8.8
   firebase_auth: ^4.17.7
+  cloud_firestore: ^4.15.9
   sign_in_button: ^3.2.0
   flutter_riverpod: ^2.4.10
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
